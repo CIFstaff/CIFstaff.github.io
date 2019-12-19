@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Princeton Confocal Imaging Facility</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Welcome to the Princeton Confocal Imaging Facility</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h1 class="mt-5">Modality Selector</h1>
+        <p class="lead">This is a tool for deciding which imaging modality will be most appropriate for your sample. Please enter all relevant sample information. </p>
+
+      </div>
+    </div>
+  </div>
+  <form>
+  <div class="col-lg-10 form-group row">
+    <label for="name" class="text-right col-md col-form-label">Name</label>
+    <div class="col-md">
+      <input id="name" name="name" type="text" required="required" class="form-control">
+    </div>
+  </div>
+  <div class="col-lg-10 form-group row">
+    <label for="email" class="text-right col-md col-form-label">Email</label>
+    <div class="col-md">
+      <input id="email" name="email" type="text" class="form-control" placeholder="example@princeton.edu">
+    </div>
+  </div>
+  <div class="col-lg-10 form-group row">
+    <label for="pi" class="text-right col-md col-form-label">PI</label>
+    <div class="col-md">
+      <input id="pi" name="pi" type="text" class="form-control">
+    </div>
+  </div>
+  <div class="col-lg-10 form-group row">
+    <label for="sample_type" class="text-right col-md col-form-label">Sample Type</label>
+    <div class="col-md">
+      <select id="sample_type" name="sample_type" class="custom-select" aria-describedby="sample_typeHelpBlock" required="required">
+        <option value="mono">Monolayer</option>
+        <option value="Tissue">Tissue</option>
+        <option value="big_embryo">Embryo(>100μm)</option>
+        <option value="small_embryo">Embryo(<100μm)</option>
+        <option value="organ">Organ</option>
+        <option value="organism">Organism</option>
+        <option value="other">Other</option>
+      </select>
+      <span id="sample_typeHelpBlock" class="form-text text-muted">What type of sample are you imaging?</span>
+    </div>
+  </div>
+  <div class="col-lg-10 form-group row">
+    <label class="text-right col-md">Sample Fixation</label>
+    <div class="col-md">
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <input name="sample_fixation" id="sample_fixation_0" type="checkbox" class="custom-control-input" value="live" aria-describedby="sample_fixationHelpBlock" required="required">
+        <label for="sample_fixation_0" class="custom-control-label">Live</label>
+      </div>
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <input name="sample_fixation" id="sample_fixation_1" type="checkbox" class="custom-control-input" value="fixed" aria-describedby="sample_fixationHelpBlock" required="required">
+        <label for="sample_fixation_1" class="custom-control-label">Fixed</label>
+      </div>
+      <span id="sample_fixationHelpBlock" class="form-text text-muted">Is your sample live or fixed?</span>
+    </div>
+  </div>
+  <div class="col-lg-10 form-group row">
+    <label class="text-right col-md">Temporal Resolution</label>
+    <div class="col-md">
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <input name="temp_resolution" id="temp_resolution_0" type="checkbox" class="custom-control-input" value="slow" aria-describedby="temp_resolutionHelpBlock">
+        <label for="temp_resolution_0" class="custom-control-label"><5fps</label>
+      </div>
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <input name="temp_resolution" id="temp_resolution_1" type="checkbox" class="custom-control-input" value="fast" aria-describedby="temp_resolutionHelpBlock">
+        <label for="temp_resolution_1" class="custom-control-label">>5fps</label>
+      </div>
+      <span id="temp_resolutionHelpBlock" class="form-text text-muted">IF LIVE - How often will you need to take images?</span>
+    </div>
+  </div>
+  <div class="col-lg-10 form-group row">
+    <label for="immersion" class="text-right col-md col-form-label">Immersion</label>
+    <div class="col-md">
+      <select id="immersion" name="immersion" class="custom-select" aria-describedby="immersionHelpBlock" required="required">
+        <option value="oil">Oil</option>
+        <option value="aqueous">Aqueous (water, culture media, PBS)</option>
+        <option value="glycerol">Glycerol</option>
+        <option value="air">Air</option>
+        <option value="cubic">CUBIC</option>
+        <option value="other">Other</option>
+      </select>
+      <span id="immersionHelpBlock" class="form-text text-muted">What is your imaging media?</span>
+    </div>
+  </div>
+  <div class="col-lg-10 form-group row">
+    <label for="magnification" class="text-right col-md col-form-label">Magnification</label>
+    <div class="col-md">
+      <select id="magnification" name="magnification" class="custom-select" aria-describedby="magnificationHelpBlock" required="required">
+        <option value="4x">4x</option>
+        <option value="10x">10x</option>
+        <option value="20x">20x</option>
+        <option value="40x">40x</option>
+        <option value="60x">60x</option>
+        <option value="100x">100x</option>
+        <option value="not_listed">Not Listed</option>
+      </select>
+      <span id="magnificationHelpBlock" class="form-text text-muted">Which objective do you plan to use?</span>
+    </div>
+  </div>
+  <div class="col-lg-10 form-group row">
+    <label class="text-right col-md">Length Scale</label>
+    <div class="col-md">
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <input name="length_scale" id="length_scale_0" type="checkbox" class="custom-control-input" value="standard" aria-describedby="length_scaleHelpBlock" required="required" checked="checked">
+        <label for="length_scale_0" class="custom-control-label">>250 nm</label>
+      </div>
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <input name="length_scale" id="length_scale_1" type="checkbox" class="custom-control-input" value="superres" aria-describedby="length_scaleHelpBlock" required="required">
+        <label for="length_scale_1" class="custom-control-label"><250 nm</label>
+      </div>
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <input name="length_scale" id="length_scale_2" type="checkbox" class="custom-control-input" value="localisation" aria-describedby="length_scaleHelpBlock" required="required">
+        <label for="length_scale_2" class="custom-control-label"><120 nm</label>
+      </div>
+      <span id="length_scaleHelpBlock" class="form-text text-muted">What is the size of the smallest features you are trying to resolve?</span>
+    </div>
+  </div>
+  <div class="col-lg-10 form-group row">
+    <div class="offset-6 col-md">
+      <button name="submit" type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </div>
+</form>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.slim.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

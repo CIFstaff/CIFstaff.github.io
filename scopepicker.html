@@ -58,26 +58,26 @@
     </div>
   </div>
   <form>
-  <div class="col-lg-10 form-group row">
-    <label for="name" class="text-right col-md col-form-label">Name</label>
-    <div class="col-md">
-      <input id="name" name="name" type="text" required="required" class="form-control">
+  <div class="col-lg-4 offset-lg-4 form-group">
+    <label for="name" class="text-left col-sm col-form-label">Name</label>
+    <div class="col-sm">
+      <input id="name" name="name" type="text" required="required" class="form-control" placeholder="Jane Doe">
     </div>
   </div>
-  <div class="col-lg-10 form-group row">
-    <label for="email" class="text-right col-md col-form-label">Email</label>
+  <div class="col-lg-4 offset-lg-4 form-group">
+    <label for="email" class="text-left col-md col-form-label">Email</label>
     <div class="col-md">
       <input id="email" name="email" type="text" class="form-control" placeholder="example@princeton.edu">
     </div>
   </div>
-  <div class="col-lg-10 form-group row">
-    <label for="pi" class="text-right col-md col-form-label">PI</label>
+  <div class="col-lg-4 offset-lg-4 form-group">
+    <label for="pi" class="text-left col-md col-form-label">PI</label>
     <div class="col-md">
-      <input id="pi" name="pi" type="text" class="form-control">
+      <input id="pi" name="pi" type="text" class="form-control" placeholder="PI Name">
     </div>
   </div>
-  <div class="col-lg-10 form-group row">
-    <label for="sample_type" class="text-right col-md col-form-label">Sample Type</label>
+  <div class="col-lg-4 offset-lg-4 form-group">
+    <label for="sample_type" class="text-left col-md col-form-label">Sample Type</label>
     <div class="col-md">
       <select id="sample_type" name="sample_type" class="custom-select" aria-describedby="sample_typeHelpBlock" required="required">
         <option value="mono">Monolayer</option>
@@ -91,8 +91,8 @@
       <span id="sample_typeHelpBlock" class="form-text text-muted">What type of sample are you imaging?</span>
     </div>
   </div>
-  <div class="col-lg-10 form-group row">
-    <label class="text-right col-md">Sample Fixation</label>
+  <div class="col-lg-4 offset-lg-4 form-group">
+    <label class="text-left col-md">Sample Fixation</label>
     <div class="col-md">
       <div class="custom-control custom-checkbox custom-control-inline">
         <input name="sample_fixation" id="sample_fixation_0" type="checkbox" class="custom-control-input" value="live" aria-describedby="sample_fixationHelpBlock" required="required">
@@ -105,8 +105,8 @@
       <span id="sample_fixationHelpBlock" class="form-text text-muted">Is your sample live or fixed?</span>
     </div>
   </div>
-  <div class="col-lg-10 form-group row">
-    <label class="text-right col-md">Temporal Resolution</label>
+  <div class="col-lg-4 offset-lg-4 form-group">
+    <label class="text-left col-md">Temporal Resolution</label>
     <div class="col-md">
       <div class="custom-control custom-checkbox custom-control-inline">
         <input name="temp_resolution" id="temp_resolution_0" type="checkbox" class="custom-control-input" value="slow" aria-describedby="temp_resolutionHelpBlock">
@@ -119,8 +119,8 @@
       <span id="temp_resolutionHelpBlock" class="form-text text-muted">IF LIVE - How often will you need to take images?</span>
     </div>
   </div>
-  <div class="col-lg-10 form-group row">
-    <label for="immersion" class="text-right col-md col-form-label">Immersion</label>
+  <div class="col-lg-4 offset-lg-4 form-group">
+    <label for="immersion" class="text-left col-md col-form-label">Immersion</label>
     <div class="col-md">
       <select id="immersion" name="immersion" class="custom-select" aria-describedby="immersionHelpBlock" required="required">
         <option value="oil">Oil</option>
@@ -133,8 +133,8 @@
       <span id="immersionHelpBlock" class="form-text text-muted">What is your imaging media?</span>
     </div>
   </div>
-  <div class="col-lg-10 form-group row">
-    <label for="magnification" class="text-right col-md col-form-label">Magnification</label>
+  <div class="col-lg-4 offset-lg-4 form-group">
+    <label for="magnification" class="text-left col-md col-form-label">Magnification</label>
     <div class="col-md">
       <select id="magnification" name="magnification" class="custom-select" aria-describedby="magnificationHelpBlock" required="required">
         <option value="4x">4x</option>
@@ -148,8 +148,8 @@
       <span id="magnificationHelpBlock" class="form-text text-muted">Which objective do you plan to use?</span>
     </div>
   </div>
-  <div class="col-lg-10 form-group row">
-    <label class="text-right col-md">Length Scale</label>
+  <div class="col-lg-4 offset-lg-4 form-group">
+    <label class="text-left col-md">Length Scale</label>
     <div class="col-md">
       <div class="custom-control custom-checkbox custom-control-inline">
         <input name="length_scale" id="length_scale_0" type="checkbox" class="custom-control-input" value="standard" aria-describedby="length_scaleHelpBlock" required="required" checked="checked">
@@ -166,7 +166,7 @@
       <span id="length_scaleHelpBlock" class="form-text text-muted">What is the size of the smallest features you are trying to resolve?</span>
     </div>
   </div>
-  <div class="col-lg-10 form-group row">
+  <div class="col-lg-4 offset-lg-4 form-group">
     <div class="offset-6 col-md">
       <button name="submit" type="submit" class="btn btn-primary">Submit</button>
     </div>

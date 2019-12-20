@@ -57,7 +57,8 @@
       </div>
     </div>
   </div>
-  <form>
+  <form name="scopepicker">
+  <!--
   <div class="col-lg-4 offset-lg-4 form-group">
     <label for="name" class="text-left col-sm col-form-label">Name</label>
     <div class="col-sm">
@@ -76,6 +77,7 @@
       <input id="pi" name="pi" type="text" class="form-control" placeholder="PI Name">
     </div>
   </div>
+-->
   <div class="col-lg-4 offset-lg-4 form-group">
     <label for="sample_type" class="text-left col-md col-form-label">Sample Type</label>
     <div class="col-md">
@@ -94,12 +96,12 @@
   <div class="col-lg-4 offset-lg-4 form-group">
     <label class="text-left col-md">Sample Fixation</label>
     <div class="col-md">
-      <div class="custom-control custom-checkbox custom-control-inline">
-        <input name="sample_fixation" id="sample_fixation_0" type="checkbox" class="custom-control-input" value="live" aria-describedby="sample_fixationHelpBlock" required="required">
+      <div class="custom-control custom-radio custom-control-inline">
+        <input name="sample_fixation" id="sample_fixation_0" type="radio" class="custom-control-input" value="live" aria-describedby="sample_fixationHelpBlock" required="required">
         <label for="sample_fixation_0" class="custom-control-label">Live</label>
       </div>
-      <div class="custom-control custom-checkbox custom-control-inline">
-        <input name="sample_fixation" id="sample_fixation_1" type="checkbox" class="custom-control-input" value="fixed" aria-describedby="sample_fixationHelpBlock" required="required">
+      <div class="custom-control custom-radio custom-control-inline">
+        <input name="sample_fixation" id="sample_fixation_1" type="radio" class="custom-control-input" value="fixed" aria-describedby="sample_fixationHelpBlock" required="required" checked="checked">
         <label for="sample_fixation_1" class="custom-control-label">Fixed</label>
       </div>
       <span id="sample_fixationHelpBlock" class="form-text text-muted">Is your sample live or fixed?</span>
@@ -108,15 +110,29 @@
   <div class="col-lg-4 offset-lg-4 form-group">
     <label class="text-left col-md">Temporal Resolution</label>
     <div class="col-md">
-      <div class="custom-control custom-checkbox custom-control-inline">
-        <input name="temp_resolution" id="temp_resolution_0" type="checkbox" class="custom-control-input" value="slow" aria-describedby="temp_resolutionHelpBlock">
+      <div class="custom-control custom-radio custom-control-inline">
+        <input name="temp_resolution" id="temp_resolution_0" type="radio" class="custom-control-input" value="slow" aria-describedby="temp_resolutionHelpBlock">
         <label for="temp_resolution_0" class="custom-control-label"><5fps</label>
       </div>
-      <div class="custom-control custom-checkbox custom-control-inline">
-        <input name="temp_resolution" id="temp_resolution_1" type="checkbox" class="custom-control-input" value="fast" aria-describedby="temp_resolutionHelpBlock">
+      <div class="custom-control custom-radio custom-control-inline">
+        <input name="temp_resolution" id="temp_resolution_1" type="radio" class="custom-control-input" value="fast" checked="checked" aria-describedby="temp_resolutionHelpBlock">
         <label for="temp_resolution_1" class="custom-control-label">>5fps</label>
       </div>
       <span id="temp_resolutionHelpBlock" class="form-text text-muted">IF LIVE - How often will you need to take images?</span>
+    </div>
+  </div>
+  <div class="col-lg-4 offset-lg-4 form-group">
+    <label class="text-left col-md">Imaging Depth</label>
+    <div class="col-md">
+      <div class="custom-control custom-radio custom-control-inline">
+        <input name="imaging_depth" id="imaging_depth_0" type="radio" class="custom-control-input" value="short" aria-describedby="imaging_depthHelpBlock" required="required" checked="checked">
+        <label for="imaging_depth_0" class="custom-control-label"><100 microns</label>
+      </div>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input name="imaging_depth" id="imaging_depth_1" type="radio" class="custom-control-input" value="long" aria-describedby="imaging_depthHelpBlock" required="required">
+        <label for="imaging_depth_1" class="custom-control-label">>100 microns</label>
+      </div>
+      <span id="imaging_depthHelpBlock" class="form-text text-muted">How far into your sample will you need to image?</span>
     </div>
   </div>
   <div class="col-lg-4 offset-lg-4 form-group">
@@ -151,16 +167,16 @@
   <div class="col-lg-4 offset-lg-4 form-group">
     <label class="text-left col-md">Length Scale</label>
     <div class="col-md">
-      <div class="custom-control custom-checkbox custom-control-inline">
-        <input name="length_scale" id="length_scale_0" type="checkbox" class="custom-control-input" value="standard" aria-describedby="length_scaleHelpBlock" required="required" checked="checked">
+      <div class="custom-control custom-radio custom-control-inline">
+        <input name="length_scale" id="length_scale_0" type="radio" class="custom-control-input" value="standard" aria-describedby="length_scaleHelpBlock" required="required" checked="checked">
         <label for="length_scale_0" class="custom-control-label">>250 nm</label>
       </div>
-      <div class="custom-control custom-checkbox custom-control-inline">
-        <input name="length_scale" id="length_scale_1" type="checkbox" class="custom-control-input" value="superres" aria-describedby="length_scaleHelpBlock" required="required">
+      <div class="custom-control custom-radio custom-control-inline">
+        <input name="length_scale" id="length_scale_1" type="radio" class="custom-control-input" value="superres" aria-describedby="length_scaleHelpBlock" required="required">
         <label for="length_scale_1" class="custom-control-label"><250 nm</label>
       </div>
-      <div class="custom-control custom-checkbox custom-control-inline">
-        <input name="length_scale" id="length_scale_2" type="checkbox" class="custom-control-input" value="localisation" aria-describedby="length_scaleHelpBlock" required="required">
+      <div class="custom-control custom-radio custom-control-inline">
+        <input name="length_scale" id="length_scale_2" type="radio" class="custom-control-input" value="localisation" aria-describedby="length_scaleHelpBlock" required="required">
         <label for="length_scale_2" class="custom-control-label"><120 nm</label>
       </div>
       <span id="length_scaleHelpBlock" class="form-text text-muted">What is the size of the smallest features you are trying to resolve?</span>
@@ -168,7 +184,7 @@
   </div>
   <div class="col-lg-4 offset-lg-4 form-group">
     <div class="offset-6 col-md">
-      <button name="submit" type="submit" class="btn btn-primary">Submit</button>
+      <button name="submit" type="submit" class="btn btn-primary" onClick="results(this.form)">Submit</button>
     </div>
   </div>
 </form>
@@ -177,6 +193,27 @@
   <script src="vendor/jquery/jquery.slim.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
+  <!-- script for result return to user-->
+  <script>
+  function results (form) {
+    //get selected option
+    var selectedtype = form.sample_type.value;
+    var fix = form.sample_fixation.value;
+    var temp = form.temp_resolution.value;
+    var imm = form.immersion.value;
+    var mag = form.magnification.value;
+    var scale = form.length_scale.value;
+    var depth = form.imaging_depth.value;
+    if ((selectedtype === 'mono' || selectedtype === 'Tissue' || selectedtype === 'small_embryo') && (fix === 'live' || fix === 'fixed') && temp === 'fast' && scale ==='standard') {
+      alert ("Spinning Disc");
+
+    }
+    else {
+      alert ("not possible");
+    }
+//    alert (selectedtype);
+  }
+  </script>
 </body>
 
 </html>

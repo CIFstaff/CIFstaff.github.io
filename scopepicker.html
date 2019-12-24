@@ -22,25 +22,28 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
     <div class="container">
-      <a class="navbar-brand" href="#">Welcome to the Princeton Confocal Imaging Facility</a>
+      <a class="navbar-brand" href="index.html">Welcome to the Princeton Confocal Imaging Facility</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home
-              <span class="sr-only">(current)</span>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="about.html">About</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item active">
             <a class="nav-link" href="scopepicker.html">Modality Selector</a>
           </li>
+<span class="sr-only">(current)</span>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="usefullinks.html">Useful Links</a>
           </li>
         </ul>
       </div>
@@ -84,8 +87,8 @@
       <select id="sample_type" name="sample_type" class="custom-select" aria-describedby="sample_typeHelpBlock" required="required">
         <option value="mono">Monolayer</option>
         <option value="Tissue">Tissue</option>
-        <option value="big_embryo">Embryo(>100μm)</option>
         <option value="small_embryo">Embryo(<100μm)</option>
+        <option value="big_embryo">Embryo(>100μm)</option>
         <option value="organ">Organ</option>
         <option value="organism">Organism</option>
         <option value="other">Other</option>
@@ -93,6 +96,7 @@
       <span id="sample_typeHelpBlock" class="form-text text-muted">What type of sample are you imaging?</span>
     </div>
   </div>
+  <hr>
   <div class="col-lg-4 offset-lg-4 form-group">
     <label class="text-left col-md">Sample Fixation</label>
     <div class="col-md">
@@ -107,20 +111,22 @@
       <span id="sample_fixationHelpBlock" class="form-text text-muted">Is your sample live or fixed?</span>
     </div>
   </div>
+  <hr>
   <div class="col-lg-4 offset-lg-4 form-group">
     <label class="text-left col-md">Temporal Resolution</label>
     <div class="col-md">
       <div class="custom-control custom-radio custom-control-inline">
-        <input name="temp_resolution" id="temp_resolution_0" type="radio" class="custom-control-input" value="slow" aria-describedby="temp_resolutionHelpBlock">
+        <input name="temp_resolution" id="temp_resolution_0" type="radio" class="custom-control-input" value="slow" checked="checked" aria-describedby="temp_resolutionHelpBlock">
         <label for="temp_resolution_0" class="custom-control-label"><5fps</label>
       </div>
       <div class="custom-control custom-radio custom-control-inline">
-        <input name="temp_resolution" id="temp_resolution_1" type="radio" class="custom-control-input" value="fast" checked="checked" aria-describedby="temp_resolutionHelpBlock">
+        <input name="temp_resolution" id="temp_resolution_1" type="radio" class="custom-control-input" value="fast" aria-describedby="temp_resolutionHelpBlock">
         <label for="temp_resolution_1" class="custom-control-label">>5fps</label>
       </div>
-      <span id="temp_resolutionHelpBlock" class="form-text text-muted">IF LIVE - How often will you need to take images?</span>
+      <span id="temp_resolutionHelpBlock" class="form-text text-muted"><p>IF LIVE - How often will you need to take images?</p><p>Note: 5fps = 1 frame every 20 ms</p></span>
     </div>
   </div>
+  <hr>
   <div class="col-lg-4 offset-lg-4 form-group">
     <label class="text-left col-md">Imaging Depth</label>
     <div class="col-md">
@@ -135,6 +141,7 @@
       <span id="imaging_depthHelpBlock" class="form-text text-muted">How far into your sample will you need to image?</span>
     </div>
   </div>
+  <hr>
   <div class="col-lg-4 offset-lg-4 form-group">
     <label for="immersion" class="text-left col-md col-form-label">Immersion</label>
     <div class="col-md">
@@ -149,6 +156,7 @@
       <span id="immersionHelpBlock" class="form-text text-muted">What is your imaging media?</span>
     </div>
   </div>
+  <hr>
   <div class="col-lg-4 offset-lg-4 form-group">
     <label for="magnification" class="text-left col-md col-form-label">Magnification</label>
     <div class="col-md">
@@ -164,24 +172,26 @@
       <span id="magnificationHelpBlock" class="form-text text-muted">Which objective do you plan to use?</span>
     </div>
   </div>
+  <hr>
   <div class="col-lg-4 offset-lg-4 form-group">
     <label class="text-left col-md">Length Scale</label>
     <div class="col-md">
       <div class="custom-control custom-radio custom-control-inline">
         <input name="length_scale" id="length_scale_0" type="radio" class="custom-control-input" value="standard" aria-describedby="length_scaleHelpBlock" required="required" checked="checked">
-        <label for="length_scale_0" class="custom-control-label">>250 nm</label>
+        <label for="length_scale_0" class="custom-control-label">greater than 250 nm</label>
       </div>
       <div class="custom-control custom-radio custom-control-inline">
         <input name="length_scale" id="length_scale_1" type="radio" class="custom-control-input" value="superres" aria-describedby="length_scaleHelpBlock" required="required">
-        <label for="length_scale_1" class="custom-control-label"><250 nm</label>
+        <label for="length_scale_1" class="custom-control-label">less than 250 nm</label>
       </div>
       <div class="custom-control custom-radio custom-control-inline">
         <input name="length_scale" id="length_scale_2" type="radio" class="custom-control-input" value="localisation" aria-describedby="length_scaleHelpBlock" required="required">
-        <label for="length_scale_2" class="custom-control-label"><120 nm</label>
+        <label for="length_scale_2" class="custom-control-label">less than 120 nm</label>
       </div>
       <span id="length_scaleHelpBlock" class="form-text text-muted">What is the size of the smallest features you are trying to resolve?</span>
     </div>
   </div>
+  <hr>
   <div class="col-lg-4 offset-lg-4 form-group">
     <div class="offset-6 col-md">
       <button name="submit" type="submit" class="btn btn-primary" onClick="results(this.form)">Submit</button>
@@ -204,12 +214,33 @@
     var mag = form.magnification.value;
     var scale = form.length_scale.value;
     var depth = form.imaging_depth.value;
-    if ((selectedtype === 'mono' || selectedtype === 'Tissue' || selectedtype === 'small_embryo') && (fix === 'live' || fix === 'fixed') && temp === 'fast' && scale ==='standard') {
+    if ((selectedtype === 'mono' || selectedtype === 'Tissue' || selectedtype === 'small_embryo') && (fix === 'live' || fix === 'fixed') && temp === 'slow' && scale === 'standard' && depth === 'short') {
+      alert ("Point Scanning Confocal (1 or 2 photon)");
+    }
+    else if ((selectedtype === 'big_embryo' || selectedtype === 'Tissue' || selectedtype === 'small_embryo') && (fix === 'live' || fix === 'fixed') && temp === 'slow' && scale === 'standard' && (depth === 'short' || depth === 'long') && (mag === '4x' || mag === '10x' || mag === '20x')) {
+      alert ("Point Scanning Confocal (2 photon)\nor\nMuVi Light-Sheet");
+    }
+    else if ((selectedtype === 'big_embryo' || selectedtype === 'Tissue' || selectedtype === 'small_embryo') && (fix === 'live' || fix === 'fixed') && temp === 'slow' && scale === 'standard' && (depth === 'short' || depth === 'long') && mag === '40x') {
+      alert ("Point Scanning Confocal (2 photon)");
+    }
+    else if ((selectedtype === 'big_embryo' || selectedtype === 'organ' || selectedtype === 'organism') && (fix === 'live' || fix === 'fixed') && (temp === 'fast' || temp ==='slow') && (scale === 'standard' || scale === 'superres') && (imm === 'aqueous' || imm === 'glycerol' || imm === 'air' || imm === 'cubic') && (mag === '4x' || mag === '10x' || mag === '20x')) {
+      alert ("MuVi Light-Sheet");
+    }
+    else if ((selectedtype === 'mono' || selectedtype === 'Tissue' || selectedtype === 'small_embryo') && (fix === 'live' || fix === 'fixed') && temp === 'fast' && scale ==='standard') {
       alert ("Spinning Disc");
+    }
+/*    else if ((selectedtype === 'mono' || selectedtype === 'Tissue' || selectedtype === 'small_embryo') && (fix === 'live' || fix === 'fixed') && (temp === 'fast' || temp === 'slow') && scale ==='standard' && (mag === '60x' || mag === '100x')) {
+      alert ("Point Scanning Confocal (1 or 2 photon)\nor\nSpinning Disc");
+    }
 
+*/    else if ((selectedtype === 'mono' || selectedtype === 'Tissue' || selectedtype === 'small_embryo') && (fix === 'live' || fix === 'fixed') && (temp === 'slow' || temp === 'fast') && (depth === 'long' || depth === 'short') && scale === 'superres') {
+      alert ("SIM\nor\nExtended Resolution\nor\nLight-Sheet");
+    }
+    else if ((selectedtype === 'mono') && (fix === 'live' || fix === 'fixed') && (temp === 'slow' || temp === 'fast') && scale ==='localisation') {
+      alert ("STORM");
     }
     else {
-      alert ("not possible");
+      alert ("Not possible, please contact CIF staff for assistance.");
     }
 //    alert (selectedtype);
   }

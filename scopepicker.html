@@ -15,6 +15,15 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="vendor/bootstrap/css/custom.css">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155380061-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-155380061-1');
+  </script>
 
 </head>
 
@@ -94,7 +103,7 @@
         <option value="organism">Organism</option>
         <option value="other">Other</option>
       </select>
-      <span id="sample_typeHelpBlock" class="form-text text-muted">What type of sample are you imaging?</span>
+      <span id="sample_typeHelpBlock" class="form-text text-muted"><p>What type of sample are you imaging?</p></span>
     </div>
   </div>
   <hr>
@@ -109,7 +118,7 @@
         <input name="sample_fixation" id="sample_fixation_1" type="radio" class="custom-control-input" value="fixed" aria-describedby="sample_fixationHelpBlock" required="required" checked="checked">
         <label for="sample_fixation_1" class="custom-control-label">Fixed</label>
       </div>
-      <span id="sample_fixationHelpBlock" class="form-text text-muted">Is your sample live or fixed?</span>
+      <span id="sample_fixationHelpBlock" class="form-text text-muted"><p>Is your sample live or fixed?</p></span>
     </div>
   </div>
   <hr>
@@ -118,11 +127,11 @@
     <div class="col-md">
       <div class="custom-control custom-radio custom-control-inline">
         <input name="temp_resolution" id="temp_resolution_0" type="radio" class="custom-control-input" value="slow" checked="checked" aria-describedby="temp_resolutionHelpBlock">
-        <label for="temp_resolution_0" class="custom-control-label"><5fps</label>
+        <label for="temp_resolution_0" class="custom-control-label">slower than 5fps</label>
       </div>
       <div class="custom-control custom-radio custom-control-inline">
         <input name="temp_resolution" id="temp_resolution_1" type="radio" class="custom-control-input" value="fast" aria-describedby="temp_resolutionHelpBlock">
-        <label for="temp_resolution_1" class="custom-control-label">>5fps</label>
+        <label for="temp_resolution_1" class="custom-control-label">faster than 5fps</label>
       </div>
       <span id="temp_resolutionHelpBlock" class="form-text text-muted"><p>IF LIVE - How often will you need to take images?</p><p>Note: 5fps = 1 frame every 20 ms</p></span>
     </div>
@@ -133,13 +142,13 @@
     <div class="col-md">
       <div class="custom-control custom-radio custom-control-inline">
         <input name="imaging_depth" id="imaging_depth_0" type="radio" class="custom-control-input" value="short" aria-describedby="imaging_depthHelpBlock" required="required" checked="checked">
-        <label for="imaging_depth_0" class="custom-control-label"><100 microns</label>
+        <label for="imaging_depth_0" class="custom-control-label">less than 100 microns</label>
       </div>
       <div class="custom-control custom-radio custom-control-inline">
         <input name="imaging_depth" id="imaging_depth_1" type="radio" class="custom-control-input" value="long" aria-describedby="imaging_depthHelpBlock" required="required">
-        <label for="imaging_depth_1" class="custom-control-label">>100 microns</label>
+        <label for="imaging_depth_1" class="custom-control-label">more than 100 microns</label>
       </div>
-      <span id="imaging_depthHelpBlock" class="form-text text-muted">How far into your sample will you need to image?</span>
+      <span id="imaging_depthHelpBlock" class="form-text text-muted"><p>How far into your sample will you need to image?</p></span>
     </div>
   </div>
   <hr>
@@ -154,7 +163,7 @@
         <option value="cubic">CUBIC</option>
         <option value="other">Other</option>
       </select>
-      <span id="immersionHelpBlock" class="form-text text-muted">What is your imaging media?</span>
+      <span id="immersionHelpBlock" class="form-text text-muted"><p>What is your imaging media?</p></span>
     </div>
   </div>
   <hr>
@@ -170,7 +179,7 @@
         <option value="100x">100x</option>
         <option value="not_listed">Not Listed</option>
       </select>
-      <span id="magnificationHelpBlock" class="form-text text-muted">Which objective do you plan to use?</span>
+      <span id="magnificationHelpBlock" class="form-text text-muted"><p>Which objective do you plan to use?</p></span>
     </div>
   </div>
   <hr>
@@ -189,7 +198,7 @@
         <input name="length_scale" id="length_scale_2" type="radio" class="custom-control-input" value="localisation" aria-describedby="length_scaleHelpBlock" required="required">
         <label for="length_scale_2" class="custom-control-label">less than 120 nm</label>
       </div>
-      <span id="length_scaleHelpBlock" class="form-text text-muted">What is the size of the smallest features you are trying to resolve?</span>
+      <span id="length_scaleHelpBlock" class="form-text text-muted"><p>What is the size of the smallest features you are trying to resolve?</p></span>
     </div>
   </div>
   <hr>

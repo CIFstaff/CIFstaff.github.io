@@ -10,6 +10,11 @@ h1 {
 h3 {
   font-family: "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;
   }
+h6 {
+  font-family: "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;
+  font-weight: 100;
+  font-size: 0.75rem;
+  }
 p {
   font-family: "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;
   }
@@ -31,5 +36,10 @@ pre {
     border-color: #f58025;
   }
 .navbar-dark .navbar-brand {
+  font-family: "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;
   color: #f58025;
   }
+
+.nav-link {
+  font-family: "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;
+}

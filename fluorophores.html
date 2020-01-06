@@ -68,14 +68,43 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h1 class="mt-5">Commonly Used Flurophores</h1>
-<p>Fluorophores are molecules which are capable of excitation by certain wavelengths of light at which point they emit light at a different wavelength, typically longer than excitation. Below are several common fluorophores and their excitation/emission spectra. Additional information on fluorophores not listed can be found by using Thermo Fisher's <a href="https://www.thermofisher.com/us/en/home/life-science/cell-analysis/labeling-chemistry/fluorescence-spectraviewer.html">Fluorescence SpectraViewer</a></p>
-
-
+        <h1 class="mt-5">Commonly Used Fluorophores</h1>
+<p>Fluorophores are molecules which are capable of excitation by certain wavelengths of light at which point they emit light at a different wavelength, typically longer than excitation. Below are several common fluorophores and their excitation/emission spectra. Additional information on fluorophores not listed can be found by using Thermo Fisher's <a href="https://www.thermofisher.com/us/en/home/life-science/cell-analysis/labeling-chemistry/fluorescence-spectraviewer.html">Fluorescence SpectraViewer</a>.</p>
       </div>
     </div>
   </div>
+  <!-- collapsing spectra -->
+  <div id="accordion">
+    <div class="card">
+      <div class="card-header" id="headingOne">
+        <h5 class="mb-0 text-center">
+          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+            Hoechst
+          </button>
+        </h5>
+      </div>
 
+      <div id="collapseOne" class="collapse embed-responsive embed-responsive-16by9 w-50 h-50 mx-auto" aria-labelledby="headingOne" data-parent="#accordion">
+        <div class="card-body">
+            <iframe class="mx-auto embed-responsive-item" src="https://plot.ly/~azerdoum/8/" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingTwo">
+        <h5 class="mb-0 text-center">
+          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            DAPI
+          </button>
+        </h5>
+      </div>
+      <div id="collapseTwo" class="collapse embed-responsive embed-responsive-16by9 w-50 h-50 mx-auto" aria-labelledby="headingTwo" data-parent="#accordion">
+        <div class="card-body">
+  <iframe class="embed-responsive-item" src="https://plot.ly/~azerdoum/27/" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.slim.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

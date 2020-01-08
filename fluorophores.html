@@ -15,6 +15,8 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="vendor/bootstrap/css/custom.css">
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155380061-1"></script>
@@ -105,9 +107,118 @@
       </div>
     </div>
   </div>
+
+  <!-- cards set to show spectra in same space -->
+  <div class="container">
+    <div class="row">
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="hoechst-tab" data-toggle="tab" href="#hoechst" role="tab" aria-controls="hoechst" aria-selected="true">Hoechst</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="DAPI-tab" data-toggle="tab" href="#DAPI" role="tab" aria-controls="DAPI" aria-selected="false">DAPI</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="alexa350-tab" data-toggle="tab" href="#alexa350" role="tab" aria-controls="alexa350" aria-selected="false">Alexa Fluor 350</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="cascade-tab" data-toggle="tab" href="#cascade" role="tab" aria-controls="cascade" aria-selected="false">Cascade Blue</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="AMCA-tab" data-toggle="tab" href="#AMCA" role="tab" aria-controls="AMCA" aria-selected="false">AMCA</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="lucifer-tab" data-toggle="tab" href="#lucifer" role="tab" aria-controls="lucifer" aria-selected="false">Lucifer Yellow</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="alexa488-tab" data-toggle="tab" href="#alexa488" role="tab" aria-controls="alexa488" aria-selected="false">Alexa Fluor 488</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="oregon-tab" data-toggle="tab" href="#oregon" role="tab" aria-controls="oregon" aria-selected="false">Oregon Green</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="YOYO-tab" data-toggle="tab" href="#YOYO" role="tab" aria-controls="YOYO" aria-selected="false">YOYO-1</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="cy2-tab" data-toggle="tab" href="#cy2" role="tab" aria-controls="cy2" aria-selected="false">Cy-2</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="FITC-tab" data-toggle="tab" href="#FITC" role="tab" aria-controls="FITC" aria-selected="false">FITC</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="PE-tab" data-toggle="tab" href="#PE" role="tab" aria-controls="PE" aria-selected="false">PE</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="alexa546-tab" data-toggle="tab" href="#alexa546" role="tab" aria-controls="alexa546" aria-selected="false">Alexa Fluor 546</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="alexa568-tab" data-toggle="tab" href="#alexa568" role="tab" aria-controls="lucifer" aria-selected="false">Alexa Fluor 568</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="tetramethyl-tab" data-toggle="tab" href="#tetramethyl" role="tab" aria-controls="tetramethyl" aria-selected="false">Tetramethyl Rhodamine</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="lisamine-tab" data-toggle="tab" href="#lisamine" role="tab" aria-controls="lisamine" aria-selected="false">Lisamine Rhodamine</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="propidium-tab" data-toggle="tab" href="#propidium" role="tab" aria-controls="propidium" aria-selected="false">Propidium Iodide</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="BOBO-tab" data-toggle="tab" href="#BOBO" role="tab" aria-controls="BOBO" aria-selected="false">BOBO-1</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="cy5-tab" data-toggle="tab" href="#cy5" role="tab" aria-controls="cy5" aria-selected="false">Cy-5</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="alexa633-tab" data-toggle="tab" href="#alexa633" role="tab" aria-controls="alexa633" aria-selected="false">Alexa Fluor 633</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="TOTO-tab" data-toggle="tab" href="#TOTO" role="tab" aria-controls="TOTO" aria-selected="false">TOTO-3</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="APC-tab" data-toggle="tab" href="#APC" role="tab" aria-controls="lucifer" aria-selected="false">APC</a>
+    </li>
+
+  </ul>
+</div>
+<div>
+  <div class="embed-responsive mx-auto tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="hoechst" role="tabpanel" aria-labelledby="hoechst-tab"><div class="mx-auto" id="hoechstplot"></div></div>
+    <div class="tab-pane fade" id="DAPI" role="tabpanel" aria-labelledby="DAPI-tab"><div class="mx-auto" id="DAPIplot" style="width: 1110px"></div></div>
+    <div class="tab-pane fade" id="alexa350" role="tabpanel" aria-labelledby="alexa350-tab"><div class="mx-auto" id="alexa350plot" style="width: 1110px"></div></div>
+    <div class="tab-pane fade" id="AMCA" role="tabpanel" aria-labelledby="AMCA-tab"><div class="mx-auto" id="AMCAplot" style="width: 1110px"></div></div>
+    <div class="tab-pane fade" id="cascade" role="tabpanel" aria-labelledby="cascade-tab"><div class="mx-auto" id="cascadeplot" style="width: 1110px"></div></div>
+    <div class="tab-pane fade" id="lucifer" role="tabpanel" aria-labelledby="lucifer-tab"><div class="mx-auto" id="luciferplot" style="width: 1110px"></div></div>
+    <div class="tab-pane fade" id="alexa488" role="tabpanel" aria-labelledby="alexa488-tab"><iframe class="mx-auto embed-responsive-item" src="https://plot.ly/~azerdoum/16/" allowfullscreen></iframe></div>
+    <div class="tab-pane fade" id="oregon" role="tabpanel" aria-labelledby="oregon-tab"><iframe class="mx-auto embed-responsive-item" src="https://plot.ly/~azerdoum/18/" allowfullscreen></iframe></div>
+    <div class="tab-pane fade" id="YOYO" role="tabpanel" aria-labelledby="YOYO-tab"><iframe class="mx-auto embed-responsive-item" src="https://plot.ly/~azerdoum/28/" allowfullscreen></iframe></div>
+    <div class="tab-pane fade" id="cy2" role="tabpanel" aria-labelledby="cy2-tab"><iframe class="mx-auto embed-responsive-item" src="https://plot.ly/~azerdoum/20/" allowfullscreen></iframe></div>
+    <div class="tab-pane fade" id="FITC" role="tabpanel" aria-labelledby="FITC-tab"><iframe class="mx-auto embed-responsive-item" src="https://plot.ly/~azerdoum/23/" allowfullscreen></iframe></div>
+    <div class="tab-pane fade" id="PE" role="tabpanel" aria-labelledby="PE-tab"><iframe class="mx-auto embed-responsive-item" src="https://plot.ly/~azerdoum/25/" allowfullscreen></iframe></div>
+    <div class="tab-pane fade" id="alexa546" role="tabpanel" aria-labelledby="alexa546-tab"><iframe class="mx-auto embed-responsive-item" src="https://plot.ly/~azerdoum/27/" allowfullscreen></iframe></div>
+    <div class="tab-pane fade" id="alexa568" role="tabpanel" aria-labelledby="alexa568-tab"><iframe class="mx-auto embed-responsive-item" src="https://plot.ly/~azerdoum/27/" allowfullscreen></iframe></div>
+    <div class="tab-pane fade" id="tetramethyl" role="tabpanel" aria-labelledby="tetramethyl-tab"><iframe class="mx-auto embed-responsive-item" src="https://plot.ly/~azerdoum/27/" allowfullscreen></iframe></div>
+    <div class="tab-pane fade" id="lisamine" role="tabpanel" aria-labelledby="lisamine-tab"><iframe class="mx-auto embed-responsive-item" src="https://plot.ly/~azerdoum/27/" allowfullscreen></iframe></div>
+    <div class="tab-pane fade" id="propidium" role="tabpanel" aria-labelledby="propidium-tab"><iframe class="mx-auto embed-responsive-item" src="https://plot.ly/~azerdoum/27/" allowfullscreen></iframe></div>
+    <div class="tab-pane fade" id="BOBO" role="tabpanel" aria-labelledby="BOBO-tab"><iframe class="mx-auto embed-responsive-item" src="https://plot.ly/~azerdoum/27/" allowfullscreen></iframe></div>
+    <div class="tab-pane fade" id="cy5" role="tabpanel" aria-labelledby="cy5-tab"><iframe class="mx-auto embed-responsive-item" src="https://plot.ly/~azerdoum/27/" allowfullscreen></iframe></div>
+    <div class="tab-pane fade" id="alexa633" role="tabpanel" aria-labelledby="alexa633-tab"><iframe class="mx-auto embed-responsive-item" src="https://plot.ly/~azerdoum/27/" allowfullscreen></iframe></div>
+    <div class="tab-pane fade" id="TOTO" role="tabpanel" aria-labelledby="TOTO-tab"><iframe class="mx-auto embed-responsive-item" src="https://plot.ly/~azerdoum/27/" allowfullscreen></iframe></div>
+    <div class="tab-pane fade" id="APC" role="tabpanel" aria-labelledby="APC-tab"><iframe class="mx-auto embed-responsive-item" src="https://plot.ly/~azerdoum/27/" allowfullscreen></iframe></div>
+
+
+  </div>
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.slim.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- call js for plots -->
+<script src="js\hoechstplot.js"></script>
+<script src="js\DAPIpublic.js"></script>
+<script src="js\Alexa 350.js"></script>
+<script src="js\AMCA.js"></script>
+<script src="js\Cascade Blue.js"></script>
+</div>
+</div>
 
 </body>
 

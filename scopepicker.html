@@ -95,7 +95,7 @@
   </div>
 -->
   <div class="col-lg-4 offset-lg-4 form-group">
-    <label for="sample_type" class="text-left col-md col-form-label">Sample Type</label>
+    <label for="sample_type" class=" text-center col-md col-form-label"><h3>Sample Type</h3></label>
     <div class="col-md">
       <select id="sample_type" name="sample_type" class="custom-select" aria-describedby="sample_typeHelpBlock" required="required">
         <option value="mono">Monolayer</option>
@@ -104,15 +104,15 @@
         <option value="big_embryo">Embryo(>100μm)</option>
         <option value="organ">Organ</option>
         <option value="organism">Organism</option>
-        <option value="other">Other</option>
+        <option value="other">Other - Please contact CIF Staff for assistance</option>
       </select>
-      <span id="sample_typeHelpBlock" class="form-text text-muted"><p>What type of sample are you imaging?</p></span>
+      <span id="sample_typeHelpBlock" class="form-text text-center text-muted"><p>What type of sample are you imaging?</p></span>
     </div>
   </div>
   <hr>
   <div class="col-lg-4 offset-lg-4 form-group">
-    <label class="text-left col-md">Sample Fixation</label>
-    <div class="col-md">
+    <label class=" text-center col-md"><h3>Sample Fixation</h3></label>
+    <div class="col-md text-center">
       <div class="custom-control custom-radio custom-control-inline">
         <input name="sample_fixation" id="sample_fixation_0" type="radio" class="custom-control-input" value="live" aria-describedby="sample_fixationHelpBlock" required="required">
         <label for="sample_fixation_0" class="custom-control-label">Live</label>
@@ -126,53 +126,53 @@
   </div>
   <hr>
   <div class="col-lg-4 offset-lg-4 form-group">
-    <label class="text-left col-md">Temporal Resolution</label>
-    <div class="col-md">
+    <label class=" text-center col-md"><h3>Temporal Resolution</h3></label>
+    <div class="col-md text-center">
       <div class="custom-control custom-radio custom-control-inline">
         <input name="temp_resolution" id="temp_resolution_0" type="radio" class="custom-control-input" value="slow" checked="checked" aria-describedby="temp_resolutionHelpBlock">
-        <label for="temp_resolution_0" class="custom-control-label">slower than 5fps</label>
+        <label for="temp_resolution_0" class="custom-control-label">Slower than 5fps</label>
       </div>
       <div class="custom-control custom-radio custom-control-inline">
         <input name="temp_resolution" id="temp_resolution_1" type="radio" class="custom-control-input" value="fast" aria-describedby="temp_resolutionHelpBlock">
-        <label for="temp_resolution_1" class="custom-control-label">faster than 5fps</label>
+        <label for="temp_resolution_1" class="custom-control-label">Faster than 5fps</label>
       </div>
       <span id="temp_resolutionHelpBlock" class="form-text text-muted"><p>IF LIVE - How often will you need to take images?</p><p>Note: 5fps = 1 frame every 20 ms</p></span>
     </div>
   </div>
   <hr>
   <div class="col-lg-4 offset-lg-4 form-group">
-    <label class="text-left col-md">Imaging Depth</label>
-    <div class="col-md">
+    <label class=" text-center col-md"><h3>Imaging Depth</h3></label>
+    <div class="col-md text-center">
       <div class="custom-control custom-radio custom-control-inline">
         <input name="imaging_depth" id="imaging_depth_0" type="radio" class="custom-control-input" value="short" aria-describedby="imaging_depthHelpBlock" required="required" checked="checked">
-        <label for="imaging_depth_0" class="custom-control-label">less than 100 microns</label>
+        <label for="imaging_depth_0" class="custom-control-label">Less than 100 microns</label>
       </div>
       <div class="custom-control custom-radio custom-control-inline">
         <input name="imaging_depth" id="imaging_depth_1" type="radio" class="custom-control-input" value="long" aria-describedby="imaging_depthHelpBlock" required="required">
-        <label for="imaging_depth_1" class="custom-control-label">more than 100 microns</label>
+        <label for="imaging_depth_1" class="custom-control-label">More than 100 microns</label>
       </div>
       <span id="imaging_depthHelpBlock" class="form-text text-muted"><p>How far into your sample will you need to image?</p></span>
     </div>
   </div>
   <hr>
   <div class="col-lg-4 offset-lg-4 form-group">
-    <label for="immersion" class="text-left col-md col-form-label">Immersion</label>
-    <div class="col-md">
+    <label for="immersion" class=" text-center col-md col-form-label"><h3>Immersion</h3></label>
+    <div class="col-md text-center">
       <select id="immersion" name="immersion" class="custom-select" aria-describedby="immersionHelpBlock" required="required">
         <option value="oil">Oil</option>
         <option value="aqueous">Aqueous (water, culture media, PBS)</option>
         <option value="glycerol">Glycerol</option>
         <option value="air">Air</option>
         <option value="cubic">CUBIC</option>
-        <option value="other">Other</option>
+        <option value="other">Other - Please contact CIF Staff for assistance</option>
       </select>
       <span id="immersionHelpBlock" class="form-text text-muted"><p>What is your imaging media?</p></span>
     </div>
   </div>
   <hr>
   <div class="col-lg-4 offset-lg-4 form-group">
-    <label for="magnification" class="text-left col-md col-form-label">Magnification</label>
-    <div class="col-md">
+    <label for="magnification" class=" text-center col-md col-form-label"><h3>Magnification</h3></label>
+    <div class="col-md text-center">
       <select id="magnification" name="magnification" class="custom-select" aria-describedby="magnificationHelpBlock" required="required">
         <option value="4x">4x</option>
         <option value="10x">10x</option>
@@ -180,32 +180,32 @@
         <option value="40x">40x</option>
         <option value="60x">60x</option>
         <option value="100x">100x</option>
-        <option value="not_listed">Not Listed</option>
+        <option value="not_listed">Not Listed - Please contact CIF Staff for assistance</option>
       </select>
       <span id="magnificationHelpBlock" class="form-text text-muted"><p>Which objective do you plan to use?</p></span>
     </div>
   </div>
   <hr>
   <div class="col-lg-4 offset-lg-4 form-group">
-    <label class="text-left col-md">Length Scale</label>
-    <div class="col-md">
+    <label class="text-center col-md"><h3>Length Scale</h3></label>
+    <div class="col-md text-center">
       <div class="custom-control custom-radio custom-control-inline">
         <input name="length_scale" id="length_scale_0" type="radio" class="custom-control-input" value="standard" aria-describedby="length_scaleHelpBlock" required="required" checked="checked">
-        <label for="length_scale_0" class="custom-control-label">greater than 250 nm</label>
+        <label for="length_scale_0" class="custom-control-label">Greater than 250 nm</label>
       </div>
       <div class="custom-control custom-radio custom-control-inline">
         <input name="length_scale" id="length_scale_1" type="radio" class="custom-control-input" value="superres" aria-describedby="length_scaleHelpBlock" required="required">
-        <label for="length_scale_1" class="custom-control-label">less than 250 nm</label>
+        <label for="length_scale_1" class="custom-control-label">Less than 250 nm</label>
       </div>
       <div class="custom-control custom-radio custom-control-inline">
         <input name="length_scale" id="length_scale_2" type="radio" class="custom-control-input" value="localisation" aria-describedby="length_scaleHelpBlock" required="required">
-        <label for="length_scale_2" class="custom-control-label">less than 120 nm</label>
+        <label for="length_scale_2" class="custom-control-label">Less than 120 nm</label>
       </div>
       <span id="length_scaleHelpBlock" class="form-text text-muted"><p>What is the size of the smallest features you are trying to resolve?</p></span>
     </div>
   </div>
   <hr>
-  <div class="col-lg-4 offset-lg-4 form-group">
+  <div class="text-center col-md-6 form-group">
     <div class="offset-6 col-md">
       <button name="submit" type="submit" class="btn btn-primary" onClick="results(this.form)">Submit</button>
     </div>
@@ -233,7 +233,7 @@
     else if ((selectedtype === 'big_embryo' || selectedtype === 'Tissue' || selectedtype === 'small_embryo') && (fix === 'live' || fix === 'fixed') && temp === 'slow' && scale === 'standard' && (depth === 'short' || depth === 'long') && (mag === '4x' || mag === '10x' || mag === '20x')) {
       alert ("Point Scanning Confocal (2 photon)\nor\nMuVi Light-Sheet");
     }
-    else if ((selectedtype === 'big_embryo' || selectedtype === 'Tissue' || selectedtype === 'small_embryo') && (fix === 'live' || fix === 'fixed') && temp === 'slow' && scale === 'standard' && (depth === 'short' || depth === 'long') && mag === '40x') {
+    else if ((selectedtype === 'big_embryo' || selectedtype === 'Tissue' || selectedtype === 'small_embryo') && (fix === 'live' || fix === 'fixed') && temp === 'slow' && scale === 'standard' && (depth === 'short' || depth === 'long') && (mag === '40x' || mag === '60x')) {
       alert ("Point Scanning Confocal (2 photon)");
     }
     else if ((selectedtype === 'big_embryo' || selectedtype === 'organ' || selectedtype === 'organism') && (fix === 'live' || fix === 'fixed') && (temp === 'fast' || temp ==='slow') && (scale === 'standard' || scale === 'superres') && (imm === 'aqueous' || imm === 'glycerol' || imm === 'air' || imm === 'cubic') && (mag === '4x' || mag === '10x' || mag === '20x')) {

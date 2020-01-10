@@ -219,6 +219,7 @@
   <!-- script for result return to user-->
   <script>
   function results (form) {
+    event.preventDefault();
     //get selected option
     var selectedtype = form.sample_type.value;
     var fix = form.sample_fixation.value;

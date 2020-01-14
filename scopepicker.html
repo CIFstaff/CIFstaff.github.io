@@ -228,19 +228,19 @@
     var mag = form.magnification.value;
     var scale = form.length_scale.value;
     var depth = form.imaging_depth.value;
-    if ((selectedtype === 'mono' || selectedtype === 'Tissue' || selectedtype === 'small_embryo') && (fix === 'live' || fix === 'fixed') && temp === 'slow' && scale === 'standard' && depth === 'short') {
+    if ((selectedtype === 'mono' || selectedtype === 'Tissue' || selectedtype === 'small_embryo') && (fix === 'live' || fix === 'fixed') && (temp === 'slow' || temp === 'fast') && scale === 'standard' && depth === 'short' && (mag === '4x' || mag === '10x' || mag === '20x' || mag === '40x')) {
       alert ("Point Scanning Confocal (1 or 2 photon)");
     }
     else if ((selectedtype === 'big_embryo' || selectedtype === 'Tissue' || selectedtype === 'small_embryo') && (fix === 'live' || fix === 'fixed') && temp === 'slow' && scale === 'standard' && (depth === 'short' || depth === 'long') && (mag === '4x' || mag === '10x' || mag === '20x')) {
       alert ("Point Scanning Confocal (2 photon)\nor\nMuVi Light-Sheet");
     }
-    else if ((selectedtype === 'big_embryo' || selectedtype === 'Tissue' || selectedtype === 'small_embryo') && (fix === 'live' || fix === 'fixed') && temp === 'slow' && scale === 'standard' && (depth === 'short' || depth === 'long') && (mag === '40x' || mag === '60x')) {
+    else if ((selectedtype === 'big_embryo' || selectedtype === 'Tissue' || selectedtype === 'small_embryo') && (fix === 'live' || fix === 'fixed') && temp === 'slow' && scale === 'standard' && (depth === 'long') && (mag === '40x' || mag === '60x')) {
       alert ("Point Scanning Confocal (2 photon)");
     }
     else if ((selectedtype === 'big_embryo' || selectedtype === 'organ' || selectedtype === 'organism') && (fix === 'live' || fix === 'fixed') && (temp === 'fast' || temp ==='slow') && (scale === 'standard' || scale === 'superres') && (imm === 'aqueous' || imm === 'glycerol' || imm === 'air' || imm === 'cubic') && (mag === '4x' || mag === '10x' || mag === '20x')) {
       alert ("MuVi Light-Sheet");
     }
-    else if ((selectedtype === 'mono' || selectedtype === 'Tissue' || selectedtype === 'small_embryo') && (fix === 'live' || fix === 'fixed') && temp === 'fast' && scale ==='standard') {
+    else if ((selectedtype === 'mono' || selectedtype === 'Tissue' || selectedtype === 'small_embryo') && (fix === 'live' || fix === 'fixed') && temp === 'fast' && scale ==='standard' && (mag === '60x' || mag === '100x')) {
       alert ("Spinning Disc");
     }
 /*    else if ((selectedtype === 'mono' || selectedtype === 'Tissue' || selectedtype === 'small_embryo') && (fix === 'live' || fix === 'fixed') && (temp === 'fast' || temp === 'slow') && scale ==='standard' && (mag === '60x' || mag === '100x')) {

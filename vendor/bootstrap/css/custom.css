@@ -44,3 +44,17 @@ pre {
 .nav-link {
   font-family: "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;
 }
+html,
+body {
+  height: 100%;
+}
+
+#page-content {
+  flex: 1 0 auto;
+}
+
+#sticky-footer {
+  flex-shrink: none;
+  font-family: "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;
+  color: #f58025;
+}

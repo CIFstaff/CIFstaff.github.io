@@ -250,8 +250,11 @@
 */    else if ((selectedtype === 'mono' || selectedtype === 'Tissue' || selectedtype === 'small_embryo') && (fix === 'live' || fix === 'fixed') && (temp === 'slow' || temp === 'fast') && (depth === 'long' || depth === 'short') && scale === 'superres') {
       alert ("SIM\nor\nExtended Resolution\nor\nLight-Sheet");
     }
-    else if ((selectedtype === 'mono') && (fix === 'live' || fix === 'fixed') && (temp === 'slow' || temp === 'fast') && scale ==='localisation') {
+    else if ((selectedtype === 'mono') && (fix === 'fixed') && (temp === 'slow' || temp === 'fast') && scale ==='localisation') {
       alert ("STORM\nor\nSTED");
+    }
+    else if ((selectedtype === 'mono') && (fix === 'live') && (temp === 'slow' || temp === 'fast') && scale ==='localisation') {
+      alert ("STED");
     }
     else {
       alert ("Not possible, please contact CIF staff for assistance.");
